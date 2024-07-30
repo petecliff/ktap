@@ -8,7 +8,7 @@ param namespace string = 'ktap'
 param environment string = 'dev'
 
 @description('ServiceBus SKU')
-@allowed(['Basic', 'Standard'])
+@allowed(['Standard']) // Won't work with 'Basic' and don't want to get charged for 'Premium' :-)
 param serviceBusSKU string = 'Standard'
 
 var serviceBusNamespaceName = '${namespace}-sb-${environment}01'

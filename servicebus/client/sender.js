@@ -3,13 +3,6 @@ const { ServiceBusClient } = require("@azure/service-bus");
 const connectionString = process.env.CONNECTION_STRING;
 const topicName = "songs";
 
-// const messages = [
-//     { body: "Kind of Blue", customProperties: { Genre: "jazz", Rating: "5" } },
-//     { body: "The Race for Space", customProperties: { Genre: "rock", Rating: "4" } },
-//     { body: "Born to Run", customProperties: { Genre: "rocknroll", Rating: "2"} },
-//     { body: "Turn Back The Clock", customProperties: { Genre: "pop", Rating: "3"} }
-// ];
-
 //https://learn.microsoft.com/en-us/javascript/api/@azure/service-bus/servicebusmessage?view=azure-node-latest
 const messages = [
     { body: "Kind of Blue", applicationProperties: { "genre": "jazz", "rating": 5 } },

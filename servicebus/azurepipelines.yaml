@@ -5,5 +5,5 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- publish: $(System.DefaultWorkingDirectory)/infra
+- publish: $(System.DefaultWorkingDirectory)/servicebus/infra
   artifact: infra
