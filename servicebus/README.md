@@ -39,6 +39,12 @@ Terminal 1: node --env-file .\env chuck.js
 Terminal 2: node --env-file .\env sender.js
 ```
 
+The receivers have a timer that sets the wait time and then they stop listening and close. If you need more time you can extend the life of the receiver around line 31 of them:
+```
+    // Waiting long enough before closing the sender to send messages
+    await delay(10000);
+```
+
 This pushes those messages into the service bus and you can see they get queued on each of the subscriptions - all, johnny and chuck - and then (if you run the command above) chuck receives the messages and all is good. The messages remain in the all and johnny subscriptions so you can then run:
 
 ```
