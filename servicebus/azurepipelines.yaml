@@ -1,0 +1,9 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- publish: $(System.DefaultWorkingDirectory)/infra
+  artifact: infra

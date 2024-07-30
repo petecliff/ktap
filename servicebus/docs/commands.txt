@@ -1,0 +1,8 @@
+az account set --subscription "GE Azure Dev"
+az group create --name ktap-sb --location "UK South"
+az deployment group create --resource-group ktap-sb --template-file .\servicebus.bicep
+
+https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules
+https://learn.microsoft.com/en-us/azure/devops/?view=azure-devops
+https://learn.microsoft.com/en-us/azure/devops/pipelines/?view=azure-devops
+https://learn.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=azure-devops&tabs=yaml
